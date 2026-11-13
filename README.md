@@ -41,10 +41,10 @@ into the box and press **Import**:
 - a **pathofexile.com passive tree link** (`https://www.pathofexile.com/passive-skill-tree/…`):
   decoded locally, nothing is downloaded.
 
-**Long codes: use a link.** The app passes at most 16 KB per paste into a plugin's panel, so a
-longer code (most endgame builds with their items) arrives cut off, and the plugin says so. Links
-have no size limit: share the build from Path of Building as a pobb.in link (*Import/Export Build →
-Share → pobb.in*) and paste the link instead. Any code over 16 KB must be shared as a link.
+**Long codes.** POE1Fixer passes up to 256 KB per paste into a plugin's panel (older versions only
+16 KB, which cuts most endgame builds with their items). A code that arrives cut off is reported as
+such. Links have no size limit: with an older POE1Fixer, share the build from Path of Building as a
+pobb.in link (*Import/Export Build → Share → pobb.in*) and paste the link instead.
 
 The build is saved (only its trees: points and masteries, never the code itself) and selected. A
 build may hold several trees, as leveling builds do ("Lvl 01-30", "Lvl 31-60", …). With
@@ -103,7 +103,8 @@ Status tab also shows what the plugin reads, so a problem can be reported with i
 - A Scion **Ascendant**'s "Path of the …" points, which open the main tree at another class's
   start, are not used for the order: it always starts from the Scion's own start and the points
   you have, so points reached only through such a start may be listed as not reachable yet.
-- A code over 16 KB cannot be pasted whole (see *Importing a build*): use a pobb.in link.
+- With an older POE1Fixer a code over 16 KB cannot be pasted whole (see *Importing a build*): update
+  POE1Fixer or use a pobb.in link.
 - Offsets inside game memory can change with a game patch. An `offsets.json` in the plugin's config
   folder can override them without a new build (the key names are in `data/offsets.json`).
 
@@ -150,11 +151,11 @@ Status tab also shows what the plugin reads, so a problem can be reported with i
 - **ссылку на дерево с pathofexile.com** (`https://www.pathofexile.com/passive-skill-tree/…`) —
   она расшифровывается на месте, ничего не скачивается.
 
-**Длинный код — передавайте ссылкой.** Приложение передаёт в панель плагина за одну вставку не
-больше 16 КБ, поэтому более длинный код (таковы почти все эндгейм-билды с предметами) приходит
-обрезанным, и плагин об этом сообщает. У ссылок ограничения по размеру нет: поделитесь билдом из
-Path of Building ссылкой pobb.in (*Import/Export Build → Share → pobb.in*) и вставьте ссылку. Код
-длиннее 16 КБ можно передать только ссылкой.
+**Длинный код.** POE1Fixer передаёт в панель плагина за одну вставку до 256 КБ (старые версии —
+только 16 КБ, из-за чего обрезаются почти все эндгейм-билды с предметами). Если код пришёл
+обрезанным, плагин об этом сообщает. У ссылок ограничения по размеру нет: в старой версии POE1Fixer
+поделитесь билдом из Path of Building ссылкой pobb.in (*Import/Export Build → Share → pobb.in*) и
+вставьте ссылку.
 
 Билд сохраняется (только его деревья: очки и мастерства, сам код — никогда) и выбирается. В билде
 может быть несколько деревьев, как в билдах для прокачки («Lvl 01-30», «Lvl 31-60», …). Если
@@ -216,6 +217,7 @@ Path of Building ссылкой pobb.in (*Import/Export Build → Share → pobb
   от стартовой точки другого класса, для порядка не используются: он всегда строится от стартовой
   точки Scion и ваших взятых очков, поэтому очки, до которых можно дойти только от такой точки,
   могут числиться пока недостижимыми.
-- Код длиннее 16 КБ нельзя вставить целиком (см. «Импорт билда»): используйте ссылку pobb.in.
+- В старой версии POE1Fixer код длиннее 16 КБ нельзя вставить целиком (см. «Импорт билда»):
+  обновите POE1Fixer или используйте ссылку pobb.in.
 - Смещения в памяти игры могут меняться с патчами. Файл `offsets.json` в папке настроек плагина
   может переопределить их без новой сборки (названия ключей — в `data/offsets.json`).
